@@ -13,4 +13,6 @@ public class MakeAppointmentDTO {
     private Long customerId;
 
     private Long doctorId;
+
+    private String customerPIN;
 }

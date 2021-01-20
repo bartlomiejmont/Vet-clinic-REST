@@ -32,6 +32,9 @@ public class AppointmentService {
         {
             throw new NotFoundExeption();
         }
+        if(!customerRepository.findById(makeAppointmentDTO.getCustomerId()).get().getCustomerPIN().equals(makeAppointmentDTO.getCustomerPIN())){
+            throw new NotAuthorizedExeption();
+        }
 
         Appointment appointment = Appointment.builder()
                 .customerId(makeAppointmentDTO.getCustomerId())

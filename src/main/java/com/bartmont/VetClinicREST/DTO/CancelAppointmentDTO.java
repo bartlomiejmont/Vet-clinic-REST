@@ -7,6 +7,6 @@ import lombok.Data;
 @Builder
 public class CancelAppointmentDTO {
     private Long appointmentId;
-    private String CustomerID;
-    private String CustomerPIN;
+    private String customerID;
+    private String customerPIN;
 }

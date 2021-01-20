@@ -34,6 +34,10 @@ public class AppointmentController {
             return ResponseEntity
                     .status(HttpStatus.NOT_FOUND)
                     .build();
+        }catch (NotAuthorizedExeption exeption) {
+            return ResponseEntity
+                    .status(HttpStatus.FORBIDDEN)
+                    .build();
         }
         return ResponseEntity
                 .status(HttpStatus.CREATED)
